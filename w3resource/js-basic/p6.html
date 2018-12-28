@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 6</h3>
+<p>Write a program to determine whether a given year is a leap year in the Gregorian calendar</p>
+<h4>Solution Output</h4>
+<div id='leapYear'></div>
+<script>
+const isLeapYear = function(year) {
+	let isLeapYear = false
+	if ((year % 4 && year % 100 !== 0) || year % 400) {
+		isLeapYear = true
+	}
+	return `${year} is a leap year.`
+}
+document.getElementById('leapYear').innerHTML = isLeapYear(1992)
+</script>
+</body>
+</html>

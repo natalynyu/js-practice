@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 5</h3>
+<p>Reverse a string.</p>
+<h4>Solution Output</h4>
+The word 'pineapple' reversed is <span id='reversedString'></span>.
+<script>
+/**
+ * Reverses a string
+*/ 
+const reverseString = function(str) {
+	let reversedString = []
+	const splitStr = str.split("")
+	for (let i = str.length; i >= 0; i--) {
+		reversedString.push(splitStr[i])
+	}
+	return reversedString.join('')
+}
+document.getElementById('reversedString').innerHTML = reverseString('pineapple')
+</script>

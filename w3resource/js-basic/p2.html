@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 2</h3>
+<p>Write a JavaScript program to print the contents of the current window.</p>
+<h4>Solution Output</h4>
+<div id='textOfPage'></div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+const displayText = function () {
+	const text = $("body").text()
+	return text
+}
+document.getElementById('textOfPage').innerHTML = displayText()
+</script>

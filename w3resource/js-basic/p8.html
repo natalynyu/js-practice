@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 8</h3>
+<p>Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number.</p>
+<h4>Solution</h4>
+<script>
+/**  
+* Write a function where the program takes a random integer between 1 & 10 and prompts the user to guess the number
+*/
+const guessNumber = function(num) {
+	let guess = prompt("Please guess a number")
+	for (let i = 3; i > 0; i--) {
+		if (guess === num) {
+			alert("Good work!")
+			return
+		} else if (i === 1){
+			alert("Sorry, you didn't guess correctly.")
+		} else if (guess > 10 || guess < 1) {
+			guess = prompt("Please guess a number between 1 & 10")
+		} else {
+			guess = prompt(`Please guess again. You have ${i-1} guesses left.`)
+		}
+		guess = parseInt(guess, 10)
+	}
+}
+guessNumber(6);
+</script>
+</body>
+</html>

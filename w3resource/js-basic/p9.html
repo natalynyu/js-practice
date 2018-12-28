@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 9</h3>
+<p>Write a JavaScript program to calculate days left until next Christmas.</p>
+<h4>Solution</h4>
+<div id='daysUntilChristmas'></div>
+<script>
+const calcDaysUntilChristmas = function () {
+	const oneDay = 24*60*60*1000 //24 hours * 60 mins * 60 secs * 1000 millisecs
+	const todaysDate = new Date()
+	let thisYear = todaysDate.getFullYear()
+	let christmasDay = new Date(thisYear, 11, 25)
+	let daysUntilChristmas = (christmasDay - todaysDate) / oneDay
+	if (daysUntilChristmas < 0) {
+		let christmasDayNextYear = new Date(thisYear + 1, 11, 25)
+		return Math.round((christmasDayNextYear - todaysDate) / oneDay)
+	}
+	else {
+		return Math.round(daysUntilChristmas)
+	}
+}
+document.getElementById('daysUntilChristmas').innerHTML = 'There are ' + calcDaysUntilChristmas() + ' days until Christmas.'
+</script>

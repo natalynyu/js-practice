@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 7</h3>
+<p>Write program to find the 1st January that will be a Sunday between 2019 and 2050.</p>
+<h4>Solution Output</h4>
+<div id='firstSunday'></div>
+<script>
+// Write a function to find the first year between today and 2050 where January 1st falls on a Sunday
+const findJanOneOnSunday = function() {
+	const newDate = new Date()
+	const monthIndex = newDate.getMonth()
+	const dayOfMonth = newDate.getDate()
+	const year = newDate.getFullYear()
+	const dayOfWeek = newDate.getDay()
+	for (let i = year; i <= 2050; i++) {
+		let date = new Date(i, 0, 1)
+		if (date.getDay() === 0){
+			return i
+		}
+	}
+}
+document.getElementById('firstSunday').innerHTML = findJanOneOnSunday()
+</script>

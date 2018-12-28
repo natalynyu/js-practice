@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 3</h3>
+<p>Write a JavaScript program to get the current date.</p>
+<h4>Solution Output</h4>
+<div id='dateMonthYear'></div>
+<script>
+const currentDate = function() { 
+	const newDate = new Date()
+	const monthIndex = newDate.getMonth() + 1
+	const dayOfMonth = newDate.getDate()
+	const year = newDate.getFullYear()
+	 return monthIndex + "/" + dayOfMonth + "/" + year
+}
+document.getElementById('dateMonthYear').innerHTML = currentDate()
+</script>
+</body>
+</html>

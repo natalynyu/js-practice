@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Practice Problems - W3Resource - Basic</h1>
+<h3>Problem 4</h3>
+<p>Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.</p>
+<h4>Solution Output</h4>
+<div id='calcTriangleArea'></div>
+<script>
+/** 
+ * Calculates the area of a triangle with sides a, b, and c using Heron's formula 
+*/
+const calcTriangleArea = function(a, b, c) {
+	const s = (a + b + c)/2
+	const area = (Math.sqrt(s * (s - a) * (s - b) * (s - c)))
+	const roundedArea = area.toFixed(2)
+	return 'The area of the triangle with sides 5, 6, and 7 is ' + roundedArea + ' square units.'
+}
+document.getElementById('calcTriangleArea').innerHTML = calcTriangleArea(5, 6, 7)
+</script>
+</body>
+</html>
